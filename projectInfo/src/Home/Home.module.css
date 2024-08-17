@@ -1,0 +1,18 @@
+.conteiner{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,280px);
+    gap:40px;
+  
+}
+
+.image{
+    width: 240px;
+    height: 140px;
+    border-radius: 30%;
+}
+
+.title{
+    margin-top: 140px;
+    display: flex;
+    font-size: 1.5rem;
+}
