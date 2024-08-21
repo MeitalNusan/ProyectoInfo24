@@ -11,7 +11,7 @@ export const ListenAgain = () => {
         <div className={styles.conteiner} >
             {album1.map((album) => (
             <div key={album.id}>
-                <button><img className={styles.image} src={album.image} alt="" /></button>
+                <img className={styles.image} src={album.image} alt="" />
                 <h2>{album.name}</h2>
                 <p>{album.Subtitle}</p>
             </div>

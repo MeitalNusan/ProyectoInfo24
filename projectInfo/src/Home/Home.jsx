@@ -11,18 +11,11 @@ import { Contador } from "../eventos/contador"
 export const Home = () =>{
     return(
         <div>
-            <div>
-               <Nav/> 
-            </div>
+            <Nav/> 
             
-            <div>
-                <ListenAgain />
-            </div>
-            <div>
-                <Recomended />
-            </div>
-
+            <ListenAgain />
            
+            <Recomended />
         </div> 
         
     )
