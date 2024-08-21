@@ -1,0 +1,14 @@
+.nav{
+     
+    display: flex; 
+    justify-content: space-between;       
+}
+
+.imgNav{
+    margin-left: 20px;
+    width: 120px;
+    height: 60px;
+    border-radius: 20%;
+}
+
+ 
