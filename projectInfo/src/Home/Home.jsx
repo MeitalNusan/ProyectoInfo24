@@ -1,21 +1,39 @@
-import styles from "./Home.module.css"
+import styles from "../Home/Home.module.css"
 import { Nav } from "../components/Nav/Nav"
 import { ListenAgain } from "../ListenAgain/ListenAgain"
 import { Card } from "../components/ContactCard/Card"
 import { ImgPerfil } from "../components/ImgPerfil/ImgPerfil"
 import { Recomended } from "../RecomendedAlbums/Recomended"
-import { Contador } from "../eventos/contador"
-
+import { Contador } from "../EjerciciosClase/eventos/contador"
+import { Estados } from "../EjerciciosClase/Estados Complejos/estadosComplejos"
+import { Compras } from "../EjerciciosClase/Compras/Compras"
+import { CardCompras } from "../EjerciciosClase/CardCompras/CardCompras"
+import { Sidebar } from "../Sidebar/Sidebar"
+import { Galletitas } from "../EjerciciosClase/EjercicioGalletitas/galletitas"
+import { Formulario } from "../EjerciciosClase/Formularios/Formulario"
+ 
+ 
 
 
 export const Home = () =>{
     return(
-        <div>
-            <Nav/> 
-            
-            <ListenAgain />
+        <div className={styles.home}>
+
+             <ListenAgain />
            
-            <Recomended />
+            <Recomended />  
+
+
+          {/*  <Estados/>
+
+            <Formulario/>
+              
+            <Compras/>
+
+            <CardCompras/>
+
+
+           <Galletitas/> */}
         </div> 
         
     )
