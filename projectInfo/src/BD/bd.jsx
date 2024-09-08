@@ -32,13 +32,7 @@ export const bd = () => {
                 Subtitle:"Artist Name. 68 songs",
                 image:foto3
             },
-            {
-                id:"4",
-                name: "Playlist Name",
-                Subtitle:"Channel/Artist.540M views",
-                image:foto4
-               
-            },
+            
            
         ]
 
@@ -61,13 +55,7 @@ export const bd = () => {
                 Subtitle:"Artist Name. 68 songs",
                 image:foto8
             },
-            {
-                id:"9",
-                name: "Playlist Name",
-                Subtitle:"Channel/Artist.540M views",
-                image:foto9
-               
-            },
+           
             
         ];
         
