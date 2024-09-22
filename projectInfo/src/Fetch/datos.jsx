@@ -21,6 +21,16 @@ export const PedirDatos = () => {
         }
     };
 
+    const handleReset = (index) => {
+        const audioElement = audioRef.current[index];
+        if (audioElement) {
+            audioElement.currentTime = 0; 
+            if (isPlaying === index) {
+                audioElement.play(); 
+            }
+        }
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -29,7 +39,7 @@ export const PedirDatos = () => {
                     throw new Error('Error al cargar los datos');
                 }
                 const result = await res.json();
-                setData(result.body.audio_clips || []);
+                setData(result.body.audio_clips);
             } catch (error) {
                 console.error(error);
             }
@@ -40,19 +50,20 @@ export const PedirDatos = () => {
     return (
         <main>
     {data.length > 0 ? (
-        <div className={styles.conteiner}> {/* Mueve aquí el contenedor */}
+        <div className={styles.conteiner}>
             {data.map((clip, index) => (
                 <div key={clip.id}>
                     <img className={styles.image} src={clip.channel.urls.logo_image.original} alt="" />
                     <audio ref={el => audioRef.current[index] = el}>
                         <source 
-                            src={clip.urls.high_mp3} // Asegúrate de que esta sea la URL correcta
+                            src={clip.urls.high_mp3} 
                             type="audio/mp3"
                         />
                     </audio>
                     <button onClick={() => handleClick(index)}>
                         {isPlaying === index ? "Pausar" : "Reproducir"}
                     </button>
+                    <button onClick={() => handleReset(index)}>Reset</button>
                 </div>
             ))}
         </div>
