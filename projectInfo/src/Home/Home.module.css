@@ -1,8 +1,9 @@
 .conteiner{
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,280px);
-    gap:40px;
-    margin-left: 200px;
+    grid-template-columns: repeat(auto-fill,230px);
+    gap:80px;
+    margin-left: 80px;
     
   
 }

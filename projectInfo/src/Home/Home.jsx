@@ -1,39 +1,49 @@
+// import { useState, FormEvent, ChangeEvent } from "react"
 import styles from "../Home/Home.module.css"
-import { Nav } from "../components/Nav/Nav"
-import { ListenAgain } from "../ListenAgain/ListenAgain"
-import { Card } from "../components/ContactCard/Card"
-import { ImgPerfil } from "../components/ImgPerfil/ImgPerfil"
-import { Recomended } from "../RecomendedAlbums/Recomended"
-import { Contador } from "../EjerciciosClase/eventos/contador"
-import { Estados } from "../EjerciciosClase/Estados Complejos/estadosComplejos"
-import { Compras } from "../EjerciciosClase/Compras/Compras"
-import { CardCompras } from "../EjerciciosClase/CardCompras/CardCompras"
-import { Sidebar } from "../Sidebar/Sidebar"
-import { Galletitas } from "../EjerciciosClase/EjercicioGalletitas/galletitas"
-import { Formulario } from "../EjerciciosClase/Formularios/Formulario"
+// import { ListenAgain } from "../ListenAgain/ListenAgain"
+// import { Recomended } from "../RecomendedAlbums/Recomended"
+// import { Stopwatch } from "../useRef/useRef"
+// import { FormRef } from "../useRef/useRef"
+// import { VideoPlayer } from "../useRef/useRef"
+// import { AudioPlayer } from "../useRef/useRef"
+// import { ResizeComponent } from "../Resize/Resize" 
+// import { Resize } from "../Resize/Resize"
+import { PedirDatos } from "../Fetch/datos"
+// import { Audio } from "../AudioBoom/audioBoom"
  
- 
-
+  
 
 export const Home = () =>{
+ 
+
     return(
         <div className={styles.home}>
 
-             <ListenAgain />
+            <PedirDatos/>
+              
+            
+             {/* <Audio/>
+  
+           
+             <ListenAgain /> 
            
             <Recomended />  
 
+             <VideoPlayer/> 
+             <br /><br /><br />
 
-          {/*  <Estados/>
+           
+            <br /><br />
 
-            <Formulario/>
-              
-            <Compras/>
+            <FormRef/> 
 
-            <CardCompras/>
+            <Resize/>  
+
+             <Stopwatch/> */}
 
 
-           <Galletitas/> */}
+        
+
         </div> 
         
     )
