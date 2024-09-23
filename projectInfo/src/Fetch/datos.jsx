@@ -54,7 +54,7 @@ export const PedirDatos = () => {
             {data.map((clip, index) => (
                 <div key={clip.id}>
                     <img className={styles.image} src={clip.channel.urls.logo_image.original} alt="" />
-                    <audio ref={el => audioRef.current[index] = el}>
+                    <audio ref={e => audioRef.current[index] = e}>
                         <source 
                             src={clip.urls.high_mp3} 
                             type="audio/mp3"
@@ -73,7 +73,7 @@ export const PedirDatos = () => {
 </main>
     )
 
-};
+}
 
 
 
