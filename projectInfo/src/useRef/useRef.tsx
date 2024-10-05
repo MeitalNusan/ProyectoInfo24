@@ -1,33 +1,43 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useVideo } from "../Hooks/useVideo";
+import { useLoading } from "../Hooks/useLoading";
  
  
 export const VideoPlayer = () => {
-    const [isPlaying, setIsPlaying] = useState(false)
-    const videoRef = useRef<HTMLVideoElement | null>(null)
+   const { isPlaying, toggleVideo, videoRef } = useVideo()
+   const { data, isLoading, error } = useLoading()
 
+    
+   if (isLoading) {
+    return <p>Cargando...</p>;
+}
 
-const handleClick = () => {
-    const nextIsPlaying = !isPlaying
-    setIsPlaying(nextIsPlaying)
-    if (isPlaying) {
-        videoRef.current?.pause()
-    } else {
-        videoRef.current?.play()
-    }
+if (error) {
+    return <p>{error}</p>;
 }
 
     return (
-        <>
-            <button onClick={handleClick}>{isPlaying? "Pause" : "Play"}</button>
-            <video ref={videoRef} width="250">
-                <source 
-                     src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" 
-                     rel="nofollow"
-                     type="video/mp4"
-                />
-            </video>
 
-        </>
+
+<main>
+     {data ? (
+       <>
+        <button onClick={toggleVideo} aria-label={isPlaying ? "Pause video" : "Play video"}>
+            {isPlaying ? "Pause" : "Play"}
+             </button>
+              <video ref={videoRef} width="250">
+                  <source 
+                     src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" 
+                         type="video/mp4" 
+                    />
+             </video>
+                </>
+            ) : (
+                <p>No hay datos disponibles.</p>
+            )}
+        </main>
+
+ 
     )
 }
 

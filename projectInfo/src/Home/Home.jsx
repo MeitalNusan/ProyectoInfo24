@@ -8,19 +8,27 @@ import styles from "../Home/Home.module.css"
 // import { AudioPlayer } from "../useRef/useRef"
 // import { ResizeComponent } from "../Resize/Resize" 
 // import { Resize } from "../Resize/Resize"
-import { PedirDatos } from "../Fetch/datos"
+// import { PedirDatos } from "../Fetch/datos"
 // import { Audio } from "../AudioBoom/audioBoom"
+// import { App2 } from "../patrones/patrones"
+// import { App3 } from "../patrones/patrones"
+import { Playbar } from "../EjerciciosClase/Playbar/playbar"
  
-  
-
 export const Home = () =>{
  
 
     return(
-        <div className={styles.home}>
+        <div className={styles.home}> 
 
-            <PedirDatos/>
-              
+         <Playbar/>
+        {/* <App2/> */}
+        
+         {/* <VideoPlayer/>  */}
+
+            {/* <PedirDatos/> */}
+
+
+
             
              {/* <Audio/>
   
@@ -29,7 +37,7 @@ export const Home = () =>{
            
             <Recomended />  
 
-             <VideoPlayer/> 
+           
              <br /><br /><br />
 
            
