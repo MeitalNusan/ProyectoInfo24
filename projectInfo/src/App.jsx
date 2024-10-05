@@ -13,7 +13,7 @@ const podcasts = [
   {
       title: "Podcast 2",
       image: "url_de_imagen_2.jpg",
-      audioUrl: "url_de_audio_2.mp3",
+      audioUrl: "https://audioboom.com/posts/8521340-ep-498-dedicated-lovers-feat-adam22",
   },
   // Agrega más podcasts según sea necesario
 ];
