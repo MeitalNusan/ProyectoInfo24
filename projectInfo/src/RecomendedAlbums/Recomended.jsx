@@ -13,7 +13,7 @@ export const Recomended = () => {
         <div className={styles.conteiner} >
         {album2.map((album) => (
             <div key={album.id}>
-          <img className={styles.image} src={album.image} alt="" />
+          <img className={styles.image} src={album.image}/>
             <h2>{album.name}</h2>
             <p>{album.Subtitle}</p>
  
