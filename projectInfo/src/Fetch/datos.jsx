@@ -33,16 +33,9 @@ export const PedirDatos = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const res = await fetch("https://api.audioboom.com/audio_clips");
-                if (!res.ok) {
-                    throw new Error('Error al cargar los datos');
-                }
+                const res = await fetch("https://api.audioboom.com/audio_clips");   
                 const result = await res.json();
-                setData(result.body.audio_clips);
-            } catch (error) {
-                console.error(error);
-            }
+                setData(result.body.audio_clips);    
         };
         fetchData(); 
     }, []);
@@ -60,6 +53,7 @@ export const PedirDatos = () => {
                             type="audio/mp3"
                         />
                     </audio>
+                    
                     <button onClick={() => handleClick(index)}>
                         {isPlaying === index ? "Pausar" : "Reproducir"}
                     </button>
