@@ -12,15 +12,22 @@ import styles from "../Home/Home.module.css"
 // import { Audio } from "../AudioBoom/audioBoom"
 // import { App2 } from "../patrones/patrones"
 // import { App3 } from "../patrones/patrones"
-import { Playbar } from "../EjerciciosClase/Playbar/playbar"
- 
+// import App8 from "../EjerciciosClase/patrones/propDelegation"
+//  import { Playbar } from "../EjerciciosClase/Playbar/playbar"
+import App9 from "../EjerciciosClase/Playbar/playbar"
+// import { PedirDatos } from "../Fetch/datos"
+
+
+
 export const Home = () =>{
  
 
     return(
         <div className={styles.home}> 
-
-         <Playbar/>
+        {/* <PedirDatos/> */}
+            <App9/>
+        {/* <App8/> */}
+          {/* <Playbar/>   */}
         {/* <App2/> */}
         
          {/* <VideoPlayer/>  */}
